@@ -4,11 +4,12 @@ class GamesController < ApplicationController
     @computer_move = ["rock", "paper", "scissors"].sample
 
     if @computer_move == "rock"
-      outcome = "tie"
+      @outcome = "tie"
     elsif @computer_move == "paper"
-      outcome - "lose"
+      @outcome - "lose"
     else
-      outcome = "win"
+      @outcome = "win"
     end
     render("games/play_rock.html.erb")
   end
+end
